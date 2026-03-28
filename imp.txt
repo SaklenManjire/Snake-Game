@@ -1,0 +1,4 @@
+Assume 1 block=20*20
+-20px heaigh and 20px width
+-The number blocks is depend upon on screen size.
+-we are using a javascript for block creation.
