@@ -14,6 +14,10 @@ fps-frame per second in game.
 -when snake consume the food the length of the snake is increased.
 
 
+-in web dev we are going to use graph.
+
 -How to main highscore?
 -how ti maintain score?
 -Also habdle the game as per time.
+
+//digitalocean is best for backend hosting.
