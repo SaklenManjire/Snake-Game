@@ -2,3 +2,18 @@ Assume 1 block=20*20
 -20px heaigh and 20px width
 -The number blocks is depend upon on screen size.
 -we are using a javascript for block creation.
+
+
+800px is border size then we divide with height and width
+-800/30
+
+fps-frame per second in game.
+-we are going to show the user 1 second three frame.
+-each block have number.
+-we are going to maintain an array for three block objects cordinate.
+-when snake consume the food the length of the snake is increased.
+
+
+-How to main highscore?
+-how ti maintain score?
+-Also habdle the game as per time.
