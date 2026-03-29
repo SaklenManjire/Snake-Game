@@ -16,8 +16,11 @@ fps-frame per second in game.
 
 -in web dev we are going to use graph.
 
--How to main highscore?
--how ti maintain score?
--Also habdle the game as per time.
+
+Tasks:
+-Food Consume snake leght increase-completed
+-How to main highscore-completed
+-how to maintain score-completed
+-Also add timer usinf destructuring method-completed.
 
 //digitalocean is best for backend hosting.
