@@ -20,6 +20,7 @@ const rows = Math.floor(board.clientHeight / blockheight);
 const startGameSound=new Audio("Music/Start-Game.mp3");
 const EndGameSound=new Audio("Music/End-Game.mp3");
 const FoodConsumeSound=new Audio("Music/Food-Consume.mp3")
+const MoveSound=new Audio("Music/Move.mp3");
 
 let intervalId = null;
 let timerIntervalId = null;
@@ -195,12 +196,16 @@ function restartGame() {
 
 addEventListener("keydown", (event) => {
   if (event.key == "ArrowUp") {
+    MoveSound.play();
     direction = "up";
   } else if (event.key == "ArrowDown") {
+    MoveSound.play();
     direction = "down";
   } else if (event.key == "ArrowLeft") {
+    MoveSound.play();
     direction = "left";
   } else if (event.key == "ArrowRight") {
+    MoveSound.play();
     direction = "right";
   }
 });
