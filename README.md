@@ -70,8 +70,6 @@ A simple and fun Snake Game built using HTML, CSS, and JavaScript. This project 
 ---
 
 ## 🔮 Future Improvements
-
-* Add sound effects 🔊
 * Add levels or difficulty modes 🎯
 * Mobile controls 📱
 
