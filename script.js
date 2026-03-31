@@ -20,7 +20,6 @@ const rows = Math.floor(board.clientHeight / blockheight);
 let intervalId = null;
 let timerIntervalId = null;
 
-
 let food = {
   x: Math.floor(Math.random() * rows),
   y: Math.floor(Math.random() * cols),
@@ -65,7 +64,8 @@ function render() {
 
   blocks[`${food.x}-${food.y}`].classList.add("food");
 
-  //direction consitions
+
+  //direction conditions
   if (direction === "left") {
     head = { x: snake[0].x, y: snake[0].y - 1 };
   } else if (direction === "right") {
@@ -84,6 +84,19 @@ function render() {
     gameOverModel.style.display="flex"
     return;
   }
+  
+  blocks[`${snake[0].x}-${snake[0].y}`].classList.remove("head-fill")
+  //snake own tail touch game over logic
+  snake.forEach(segment=>{
+    if(head.x ==segment.x && head.y == segment.y)
+    {
+    clearInterval(intervalId);
+    modal.style.display="flex"
+    startGameModal.style.display="none"
+    gameOverModel.style.display="flex"
+    return;
+    }
+  })
 
   //food consume logic
   if (head.x == food.x && head.y == food.y) {
@@ -105,6 +118,7 @@ function render() {
   }
   snake.forEach((segment) => {
     blocks[`${segment.x}-${segment.y}`].classList.remove("fill");
+    blocks[`${snake[0].x}-${snake[0].y}`].classList.remove("head-fill")
   });
 
   //add element using unshift method
@@ -112,9 +126,12 @@ function render() {
   //remove last element using pop method
   snake.pop();
 
+  
   snake.forEach((segment) => {
     blocks[`${segment.x}-${segment.y}`].classList.add("fill");
+    blocks[`${snake[0].x}-${snake[0].y}`].classList.add("head-fill")
   });
+   
 }
 
 
