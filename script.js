@@ -17,8 +17,13 @@ const blockwidth = 50;
 const cols = Math.floor(board.clientWidth / blockwidth);
 const rows = Math.floor(board.clientHeight / blockheight);
 
+const startGameSound=new Audio("Music/Start-Game.mp3");
+const EndGameSound=new Audio("Music/End-Game.mp3");
+const FoodConsumeSound=new Audio("Music/Food-Consume.mp3")
+
 let intervalId = null;
 let timerIntervalId = null;
+
 
 let food = {
   x: Math.floor(Math.random() * rows),
@@ -79,18 +84,20 @@ function render() {
   if (head.x < 0 || head.x >= rows || head.y < 0 || head.y >= cols) {
     //stop the interval
     clearInterval(intervalId);
+    EndGameSound.play();
     modal.style.display="flex"
     startGameModal.style.display="none"
     gameOverModel.style.display="flex"
     return;
   }
-  
+
   blocks[`${snake[0].x}-${snake[0].y}`].classList.remove("head-fill")
   //snake own tail touch game over logic
   snake.forEach(segment=>{
     if(head.x ==segment.x && head.y == segment.y)
     {
     clearInterval(intervalId);
+    EndGameSound.play();
     modal.style.display="flex"
     startGameModal.style.display="none"
     gameOverModel.style.display="flex"
@@ -100,6 +107,7 @@ function render() {
 
   //food consume logic
   if (head.x == food.x && head.y == food.y) {
+    FoodConsumeSound.play();
     blocks[`${food.x}-${food.y}`].classList.remove("food");
     food = {
       x: Math.floor(Math.random() * rows),
@@ -135,7 +143,8 @@ function render() {
 }
 
 
-startButton.addEventListener("click", () => {
+startButton.addEventListener("click",() => {
+  startGameSound.play();
   modal.style.display = "none";
   intervalId = setInterval(() => {
     render();
@@ -160,6 +169,8 @@ startButton.addEventListener("click", () => {
 restartButton.addEventListener("click",restartGame)
 
 function restartGame() {
+  startGameSound.play();
+  blocks[`${snake[0].x}-${snake[0].y}`].classList.remove("head-fill")
   blocks[`${food.x}-${food.y}`].classList.remove("food");
   snake.forEach((segment) => {
     blocks[`${segment.x}-${segment.y}`].classList.remove("fill");
