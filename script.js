@@ -195,16 +195,17 @@ function restartGame() {
 
 
 addEventListener("keydown", (event) => {
-  if (event.key == "ArrowUp") {
+  console.log(event.key)
+  if (event.key == "ArrowUp" || event.key == "w") {
     MoveSound.play();
     direction = "up";
-  } else if (event.key == "ArrowDown") {
+  } else if (event.key == "ArrowDown" || event.key == "s") {
     MoveSound.play();
     direction = "down";
-  } else if (event.key == "ArrowLeft") {
+  } else if (event.key == "ArrowLeft" || event.key == "a") {
     MoveSound.play();
     direction = "left";
-  } else if (event.key == "ArrowRight") {
+  } else if (event.key == "ArrowRight" || event.key == "d") {
     MoveSound.play();
     direction = "right";
   }
