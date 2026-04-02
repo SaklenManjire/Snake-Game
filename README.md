@@ -60,12 +60,10 @@ A simple and fun Snake Game built using HTML, CSS, and JavaScript. This project 
 ---
 
 ## 📸 Screenshots
+<img width="1920" height="921" alt="Start-Game" src="https://github.com/user-attachments/assets/a8eac7e2-59cc-41c3-ab72-a7848e2a3b43" />
+<img width="1913" height="926" alt="Playing-Game" src="https://github.com/user-attachments/assets/5880c330-93ea-4cf2-b66e-a21d08114d94" />
+<img width="1920" height="921" alt="End-Game" src="https://github.com/user-attachments/assets/e4a718f8-8a9b-47a4-9480-2cc250af5c1f" />
 
-<img width="1920" height="921" alt="Start-Game" src="https://github.com/user-attachments/assets/32451868-18e4-4417-a813-2b08568e8195" />
-
-<img width="1920" height="929" alt="Playing-Game" src="https://github.com/user-attachments/assets/cf932273-b940-4a3f-89c5-fe3c11b7c6c5" />
-
-<img width="1918" height="920" alt="End-Game" src="https://github.com/user-attachments/assets/f75d5e9f-1b02-4e8d-97ed-76797e784c2f" />
 
 ---
 
